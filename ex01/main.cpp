@@ -6,7 +6,7 @@
 /*   By: kawaharadaryou <kawaharadaryou@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 21:41:51 by kawaharadar       #+#    #+#             */
-/*   Updated: 2024/11/01 18:48:16 by kawaharadar      ###   ########.fr       */
+/*   Updated: 2024/11/12 16:46:50 by kawaharadar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main(void) {
 	std::string name = "unko";
 	int num = 5;
-	Zombie *zombies = zombieHorde(5, name);
+	Zombie *zombies = zombieHorde(num, name);
 
 	for (int i = 0; i < num; i++) {
 		zombies[i].announce();

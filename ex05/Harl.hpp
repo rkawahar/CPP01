@@ -6,7 +6,7 @@
 /*   By: kawaharadaryou <kawaharadaryou@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:51:19 by kawaharadar       #+#    #+#             */
-/*   Updated: 2024/11/06 19:28:46 by kawaharadar      ###   ########.fr       */
+/*   Updated: 2024/11/12 16:54:57 by kawaharadar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,17 @@
 # include <iostream>
 
 class Harl{
-	private: void debug();
-	private: void info();
-	private: void warning();
-	private: void error();
-	private: void invalid();
+	private: 
+		void debug();
+		void info();
+		void warning();
+		void error();
+		void invalid();
 
-	public: Harl();
-	public: ~Harl();
-	public: void complain(std::string level);
+	public: 
+		Harl();
+		~Harl();
+		void complain(std::string level);
 };
 
 typedef void (Harl::*t_func)(void);
