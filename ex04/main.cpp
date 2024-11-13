@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kawaharadaryou <kawaharadaryou@student.    +#+  +:+       +#+        */
+/*   By: rkawahar <rkawahar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:30:42 by kawaharadar       #+#    #+#             */
-/*   Updated: 2024/11/06 17:39:20 by kawaharadar      ###   ########.fr       */
+/*   Updated: 2024/11/13 09:04:10 by rkawahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int main(int argc, char **argv)
 	std::string str2 = argv[3];
 
 	//infile open using ifstream class. we need to check the file error by using is_open(). 
-	std::ifstream inFile(filename);
+	std::ifstream inFile(filename.c_str());
 	if (!inFile.is_open())
 	{
 		std::cerr << "file error: " << filename <<": Couldn't open the infile" << std::endl;
@@ -54,16 +54,17 @@ int main(int argc, char **argv)
 	
 	//creating a line to write in outfile from lines.
 	std::string outLines;
-	size_t index;
 	size_t start = 0;
+	size_t index = lines.find(str1, start);
 	//size_t find(str: target string, start: starting index) { return the first index from start }
 	//if there is no str find() returns str::string::nops
-	while (index = lines.find(str1, start) != std::string::npos)
+	while (index != std::string::npos)
 	{
 		//substr(start: start index, end: end index) {return str: put out the str from start to index}
 		//if there is no end argument, put out str from start to the end of the str
 		outLines += (lines.substr(start, index - start) + str2);
 		start = index + str1.length();
+		index = lines.find(str1, start);
 	}
 	outLines += lines.substr(start);
 

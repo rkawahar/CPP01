@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kawaharadaryou <kawaharadaryou@student.    +#+  +:+       +#+        */
+/*   By: rkawahar <rkawahar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 21:42:36 by kawaharadar       #+#    #+#             */
-/*   Updated: 2024/11/12 16:48:20 by kawaharadar      ###   ########.fr       */
+/*   Updated: 2024/11/13 08:51:59 by rkawahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ZOMBIE_HPP
 # define ZOMBIE_HPP
 
-#include <iostream>
+# include <sstream>
+# include <iostream>
 
 class Zombie {
 	private: 
