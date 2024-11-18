@@ -6,7 +6,7 @@
 /*   By: rkawahar <rkawahar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:30:42 by kawaharadar       #+#    #+#             */
-/*   Updated: 2024/11/13 09:04:10 by rkawahar         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:10:02 by rkawahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int main(int argc, char **argv)
 	}
 	
 	//outfile open using ofstream class.
-	std::ofstream outFile("outfile");
+	std::ofstream outFile((filename + ".replace").c_str());
 	if (!outFile.is_open())
 	{
 		std::cerr << "file error: outfile: Couldn't open the outfile" << std::endl;
