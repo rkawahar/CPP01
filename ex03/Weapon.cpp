@@ -6,7 +6,7 @@
 /*   By: kawaharadaryou <kawaharadaryou@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:53:04 by kawaharadar       #+#    #+#             */
-/*   Updated: 2024/11/06 14:21:14 by kawaharadar      ###   ########.fr       */
+/*   Updated: 2024/11/25 12:20:02 by kawaharadar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ Weapon::Weapon(const std::string& weaponType) {
 Weapon::~Weapon() {
 }
 
-std::string Weapon::getType() const {
+const std::string& Weapon::getType() {
 	return this->_type;
 }
 
-void Weapon::setType(const std::string& type) {
+void Weapon::setType(std::string type) {
 	this->_type = type;
 }

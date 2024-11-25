@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rkawahar <rkawahar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kawaharadaryou <kawaharadaryou@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 21:45:01 by kawaharadar       #+#    #+#             */
-/*   Updated: 2024/11/13 08:53:25 by rkawahar         ###   ########.fr       */
+/*   Updated: 2024/11/25 12:17:07 by kawaharadar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 Zombie *zombieHorde(int N, std::string name) {
 	int i = 0;
-	Zombie *zombiehazard = new Zombie[N];
-
 	if (N < 1)
 		return (NULL);
+	Zombie *zombiehazard = new Zombie[N];
 	while (i < N)
 	{
 		std::ostringstream oss;

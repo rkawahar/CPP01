@@ -6,7 +6,7 @@
 /*   By: kawaharadaryou <kawaharadaryou@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:54:11 by kawaharadar       #+#    #+#             */
-/*   Updated: 2024/11/12 16:54:01 by kawaharadar      ###   ########.fr       */
+/*   Updated: 2024/11/25 12:19:53 by kawaharadar      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class Weapon {
 	public: 
 		Weapon(const std::string &weaponType);
 		~Weapon();
-		std::string getType() const;
-		void setType(const std::string& type);
+		const std::string& getType();
+		void setType(std::string type);
 };
 
 #endif
